@@ -7,10 +7,10 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  db.Article.findAll().then(function (articles) {
+  db.User.findAll().then(function (user) {
     res.render('index', {
       title: 'Generator-Express MVC',
-      articles: articles
+      articles: user
     });
   });
 });
