@@ -1,10 +1,14 @@
 
-
 var express = require('express'),
-  config = require('./config/config'),
-  db = require('./app/models');
+    config = require('./config/config'),
+    db = require('./app/models');
 
 var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+
+io.on('connection', function(){ /* … */ });
+server.listen(3000);
 
 module.exports = require('./config/express')(app, config);
 
@@ -19,4 +23,3 @@ db.sequelize
   }).catch(function (e) {
     throw new Error(e);
   });
-

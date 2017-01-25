@@ -8,8 +8,8 @@ var config = {
     app: {
       name: 'project-x'
     },
-    port: process.env.PORT || 3000,
-    db: 'postgres://localhost/project-x-development'
+    port: process.env.PORT || 5432,
+    db: 'postgres://localhost/geistdb'
   },
 
   test: {
