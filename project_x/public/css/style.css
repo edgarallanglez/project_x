@@ -1,7 +1,50 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  padding: 50px;
+  padding: 0;
+  margin: 0;
 }
 a {
   color: #00b7ff;
 }
+form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+form input {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  height: 10px;
+  outline: none;
+}
+form input[type="text"] {
+  width: 80%;
+}
+form input[type="submit"] {
+  width: 18%;
+  background: #d2d2d2;
+  border: none;
+  height: 100%;
+}
+.chat-box {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.chat-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chat-box ul li {
+  padding: 1em;
+}
+
+  .chat-box ul li:nth-child(odd){
+		background-color: white;
+  }
+  .chat-box ul li:nth-child(even){
+		background-color: rgb(230,230,230);
+  }

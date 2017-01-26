@@ -4,11 +4,6 @@ var express = require('express'),
     db = require('./app/models');
 
 var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
-
-io.on('connection', function(){ /* … */ });
-server.listen(4200);
 
 module.exports = require('./config/express')(app, config);
 
