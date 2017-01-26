@@ -9,7 +9,7 @@ var config = {
       name: 'project-x'
     },
     port: process.env.PORT || 3000,
-    db: 'postgres://localhost/geistdb'
+    db: 'postgres://localhost:5432/geistdb'
   },
 
   test: {
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'project-x'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 5432,
     db: 'postgres://localhost/project-x-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'project-x'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 5432,
     db: 'postgres://localhost/project-x-production'
   }
 };
