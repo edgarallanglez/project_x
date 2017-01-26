@@ -1,5 +1,5 @@
 $(function (){
-	var io = require('socket.io')(server);
+	// var io = require('socket.io')(server);
 	var socket = io();
 	var name = prompt("Nombre:");
 

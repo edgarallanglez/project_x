@@ -3,15 +3,7 @@ var express = require('express'),
   db = require('../models');
 
 var app = express();
-var server = require('http').createServer(app);
-io = require('socket.io')(server);
-io.on('connection', function(socket) {
-  socket.on('chat', function(msg) {
-    io.emit('chat', msg);
-  });
-});
 
-server.listen(4200);
 module.exports = function (app) {
   app.use('/', router);
 };
