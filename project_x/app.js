@@ -5,10 +5,16 @@ var express = require('express'),
 
 var app = express();
 var server = require('http').createServer(app);
-var io = require('socket.io')(server);
 
-io.on('connection', function(){ /* … */ });
-server.listen(3000);
+io = require('socket.io')(server);
+
+io.on('connection', function(socket){ 
+  socket.on('chat', function(msg){
+    io.emit('chat', msg);
+  });
+});
+
+server.listen(4200);
 
 module.exports = require('./config/express')(app, config);
 
