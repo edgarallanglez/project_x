@@ -6,10 +6,9 @@ $(function (){
 	    $('.chat-box ul').append($('<li>').text(msg));
 	});
 
-
 	$('form').on("submit", function(event){
 		event.preventDefault();
-		socket.emit('chat',$('#message').val());
+		socket.emit('chat', $('#message').val());
 	    $('#message').val('');
 	    return false;
 	});
