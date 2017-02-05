@@ -9,7 +9,8 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
- // io.sockets.emit('chat', 'mensaje' ,{ for: 'everyone' });
+  //var user_list = req.body.user_list
+  //io.sockets.emit('chat', 'mensaje' ,{ for: 'everyone' });
   res.json({ msgId: "Hola" })
   /*db.User.findAll().then(function (user) {
     res.render('index', {
